@@ -1,6 +1,6 @@
 # p5.boy
 - gameboy-like p5.js player
-- by Seungbum Kim (https://github.com/picxenk)
+- by Seungbum Kim (https://github.com/picxenk) vibe coding with https://bolt.new/
 
 # Run
 - install dependencies
