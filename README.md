@@ -20,4 +20,5 @@ npm run dev
 - 물론 무료 버전으로 이용하는거라 사용할 수 있는 토큰에는 제약이 많았습니다. 그리고 첫 버전에서는 버그도 있었고요.
 - 코드를 Cursor로 옮겨가서 기본적인 동작이 가능하도록 수정했습니다.
 
+![p5.boy screenshot](/p5.boy-screenshot.png)
 
