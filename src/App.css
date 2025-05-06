@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-text {
+  font-family: 'PressStart2P', monospace;
+  letter-spacing: -0.05em;
+}
+
+.gameboy-shadow {
+  box-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.2),
+    4px 4px 0 rgba(0, 0, 0, 0.1),
+    6px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gameboy-screen {
+  background-color: #9bbc0f;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gameboy-screen-inner {
+  background-color: #8bac0f;
+  position: relative;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: 100%;
+}
+
+.gameboy-screen-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 2px 2px;
+  pointer-events: none;
+}
+
+.gameboy-screen-inner canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-dpad, .button-action, .button-menu {
+  transition: all 0.05s ease;
+  user-select: none;
+}
+
+.button-dpad:active, .button-action:active, .button-menu:active,
+.button-dpad.active, .button-action.active, .button-menu.active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
+
+.controls-container {
+  user-select: none;
+  position: relative;
+  height: 200px;
+}
+
+.controls-section {
+  position: relative;
+  height: 200px;
+  margin-top: 2rem;
+}
+
+.d-pad-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.d-pad-cross {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 96px;
+  height: 96px;
+}
+
+.action-buttons {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 96px;
+  height: 96px;
+}
+
+.menu-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dpad-button {
+  background-color: #444;
+  transition: all 0.05s ease;
+}
+
+.dpad-button:active, .dpad-button.active {
+  background-color: #333;
+  transform: scale(0.95);
+}
+
+/* Animation for power switch */
+.power-switch {
+  transition: transform 0.3s ease;
+}
+
+.power-switch.on {
+  transform: translateX(10px);
+}
+
+/* Dot matrix effect */
+.dot-matrix {
+  position: relative;
+}
+
+.dot-matrix::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 2;
+}
