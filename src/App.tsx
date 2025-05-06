@@ -28,7 +28,7 @@ function App() {
         </main>
         
         <footer className="mt-4 text-xs text-gray-500 text-center">
-          <p>© 2025  p5.boy</p>
+          <p>© 2025 p5.boy | <a href="https://github.com/picxenk/p5.boy" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700">GitHub</a></p>
         </footer>
       </div>
     </SketchProvider>
